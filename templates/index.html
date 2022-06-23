@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+         <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+</head>
+<body>
+
+{#<div class=" container main">#}
+{#    <input id="name" class="form-control form-control-sm" type="text" placeholder="Name" aria-label=".form-control-sm example">#}
+{#    <input id="age" class="form-control form-control-sm" type="text" placeholder="Age" aria-label=".form-control-sm example">#}
+{#    <button id="view" >View</button>#}
+{#    <div id="result"></div>#}
+{#</div>#}
+
+
+<div></div>
+        <div class="alert alert-primary" role="alert">
+          Please add max number of item before insert and after insert press on the show result
+        </div>
+<div class=" container main">
+        <label>Max Number of Item</label> <br>
+        <input class="form-control" min="0" type="number" required  name="text" id="inputTextMaxItem"/>
+            <button class="btn btn-primary"  id="inputBtMaxItem" onclick="getMaxItem();">Add</button>
+            <br>
+        <label>Max Weight</label><br>
+        <input  class="form-control" min="0" type="number" required name="text" id="inputTextMaxWeight"/>
+            <br>
+
+        <label>Insert item Weight</label><br>
+        <input class="form-control" min="0" type="number"  name="text" id="inputTextWeight"/>
+        <button class="btn btn-primary" disabled id="inputBtWeight" onclick="pushDataWeight();">insert</button>
+            <br>
+
+        <label>Insert item Benefit</label><br>
+        <input class="form-control" min="0" type="number" name="text" id="inputTextBenefit"/>
+        <button class="btn btn-primary" disabled id="inputBtBenefit" onclick="pushDataBenefit();">insert</button>
+            <br><br>
+        <span>Item Weight : </span>
+        <span id="ItemWeightText"></span><br>
+        <span>Item Benefit : </span>
+        <span id="ItemBenefittText"></span> <br>
+
+        <button id="view" class="btn btn-primary show-result" >Show Result</button>
+
+        <div id="result"></div>
+        <div id="result2"></div>
+
+</div>
+
+
+
+
+
+
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'js/all.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+
+</body>
+</html>
